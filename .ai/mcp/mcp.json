@@ -1,0 +1,11 @@
+{
+  "mcpServers": {
+    "laravel-boost": {
+      "command": "/Users/nate/Library/Application Support/Herd/bin/php85",
+      "args": [
+        "/Users/nate/Sites/Inteviews/Arbor/ticket-hero/artisan",
+        "boost:mcp"
+      ]
+    }
+  }
+}
