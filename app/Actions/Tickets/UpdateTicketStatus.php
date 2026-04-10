@@ -10,6 +10,7 @@ class UpdateTicketStatus
 {
     public function handle(Ticket $ticket, TicketStatus $newStatus): Ticket
     {
+        /** @var TicketStatus $previousStatus */
         $previousStatus = $ticket->status;
 
         $ticket->update(['status' => $newStatus]);

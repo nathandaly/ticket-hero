@@ -41,6 +41,10 @@ class HandleInertiaRequests extends Middleware
             'auth' => [
                 'user' => $request->user(),
             ],
+            'hero' => [
+                'statuses' => config('hero.statuses'),
+                'difficulties' => config('hero.difficulties'),
+            ],
         ];
     }
 }

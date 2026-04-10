@@ -7,7 +7,7 @@ use App\Http\Controllers\Tickets\CreateController as TicketsCreateController;
 use App\Http\Controllers\Tickets\StoreWebController as TicketsStoreWebController;
 use Illuminate\Support\Facades\Route;
 
-Route::inertia('/', 'welcome')->name('home');
+Route::redirect('/', '/board')->name('home');
 
 Route::get('/tickets/create', TicketsCreateController::class)->name('tickets.create');
 Route::post('/tickets', TicketsStoreWebController::class)->name('tickets.store.web');

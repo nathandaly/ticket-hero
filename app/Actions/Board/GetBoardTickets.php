@@ -4,10 +4,13 @@ namespace App\Actions\Board;
 
 use App\Enums\TicketStatus;
 use App\Models\Ticket;
+use Illuminate\Support\Collection;
 
 class GetBoardTickets
 {
-    /** @return array{todo: \Illuminate\Support\Collection, in_progress: \Illuminate\Support\Collection, done: \Illuminate\Support\Collection} */
+    /**
+     * @return array{todo: Collection<int, Ticket>, in_progress: Collection<int, Ticket>, done: Collection<int, Ticket>}
+     */
     public function handle(): array
     {
         $tickets = Ticket::with('hero')

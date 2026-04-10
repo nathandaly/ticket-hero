@@ -22,10 +22,13 @@ class StoreController extends Controller
             difficulty: Difficulty::from($validated['difficulty']),
         );
 
+        /** @var Difficulty $difficulty */
+        $difficulty = $ticket->difficulty;
+
         return response()->json([
             'ticket_id' => $ticket->ticket_id,
             'hero' => $ticket->hero->name,
-            'xp' => $ticket->difficulty->xp(),
+            'xp' => $difficulty->xp(),
         ], 201);
     }
 }
