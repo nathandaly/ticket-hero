@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\About\IndexController as AboutIndexController;
 use App\Http\Controllers\Board\IndexController as BoardIndexController;
 use App\Http\Controllers\Board\UpdateStatusController as BoardUpdateStatusController;
 use App\Http\Controllers\Leaderboard\IndexController as LeaderboardIndexController;
@@ -14,3 +15,4 @@ Route::post('/tickets', TicketsStoreWebController::class)->name('tickets.store.w
 Route::get('/leaderboard', LeaderboardIndexController::class)->name('leaderboard.index');
 Route::get('/board', BoardIndexController::class)->name('board.index');
 Route::patch('/tickets/{ticket}/status', BoardUpdateStatusController::class)->name('tickets.update-status');
+Route::get('/about', AboutIndexController::class)->name('about');

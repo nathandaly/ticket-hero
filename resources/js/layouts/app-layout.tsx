@@ -5,6 +5,7 @@ const navItems = [
     { href: '/board', label: 'Board' },
     { href: '/tickets/create', label: 'Create Ticket' },
     { href: '/leaderboard', label: 'Leaderboard' },
+    { href: '/about', label: 'About' },
 ];
 
 export default function AppLayout({ children }: PropsWithChildren) {
